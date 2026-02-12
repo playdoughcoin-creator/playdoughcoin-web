@@ -1,40 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PlayDoughCoin - The Future of Digital Currency">
-    <meta name="keywords" content="PlayDoughCoin, cryptocurrency, digital currency, blockchain">
-    <meta name="author" content="PlayDoughCoin Team">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <title>PlayDoughCoin - The Future of Digital Currency</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background: #0078d4; color: #fff; padding: 10px; text-align: center; }
-        h1 { margin: 0; }
-        .signup-form { margin: 20px; padding: 20px; background: #fff; border-radius: 8px; }
-        input[type="email"] { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
-        input[type="submit"] { background: #0078d4; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; }
-        input[type="submit"]:hover { background: #005ba1; }
-        footer { text-align: center; padding: 10px; background: #0078d4; color: white; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="PlayDoughCoin ($PLYD) - The official relaunch of the most fun, fair meme coin. Join our squishy community today!">
+  <meta name="keywords" content="PlayDoughCoin, PLYD, crypto, meme coin, token, blockchain">
+  <meta name="author" content="PlayDoughCoin Team">
+  <meta property="og:title" content="PlayDoughCoin • $PLYD Relaunch">
+  <meta property="og:description" content="Join the PlayDoughCoin relaunch - A fair, fun meme coin built by the community.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=90">
+  
+  <title>PlayDoughCoin • $PLYD Relaunch</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23FFD700'/><text x='50' y='65' font-size='60' text-anchor='middle' fill='%23FF5722' font-weight='bold'>$</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: #4fc3f7;
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
+      z-index: -2;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+      position: relative;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 3px solid rgba(255, 215, 0, 0.5);
+      border-radius: 38px;
+      padding: 40px 30px;
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 70px rgba(0,0,0,0.35);
+      position: relative;
+      overflow: hidden;
+      animation: float 7s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .title {
+      font-family: 'Chewy', cursive;
+      font-size: clamp(3.8rem, 10vw, 8rem);
+      line-height: 0.92;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+    }
+
+    .title span {
+      display: inline-block;
+      animation: wobble 5s infinite;
+    }
+
+    @keyframes wobble {
+      0%,100% { transform: rotate(-4deg); }
+      50% { transform: rotate(4deg); }
+    }
+
+    .c-yellow { color: #ffeb3b; }
+    .c-orange { color: #ff5722; }
+    .c-pink { color: #e91e63; }
+    .c-purple { color: #9c27b0; }
+    .c-cyan { color: #00bcd4; }
+    .c-green { color: #4caf50; }
+    .c-red { color: #f44336; }
+
+    .subtitle {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      margin: 20px 0 40px;
+      color: #fff176;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    }
+
+    .intro {
+      font-size: 1.4rem;
+      max-width: 720px;
+      margin: 0 auto 50px;
+      line-height: 1.5;
+      color: #fffde7;
+    }
+
+    .highlight {
+      background: rgba(255,235,59,0.25);
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-weight: bold;
+      color: #ffeb3b;
+    }
+
+    .characters {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .char {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-size: cover;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .char.left {
+      bottom: 10%;
+      left: 5%;
+      transform: rotate(-12deg);
+    }
+
+    .char.right {
+      top: 15%;
+      right: 8%;
+      transform: rotate(15deg);
+    }
+
+    .char.bottom {
+      bottom: 8%;
+      right: 18%;
+      transform: rotate(-8deg);
+      width: 140px;
+      height: 140px;
+    }
+
+    /* Sections */
+    .section {
+      margin: 80px 0;
+    }
+
+    .section h2 {
+      font-family: 'Chewy', cursive;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      margin-bottom: 40px;
+      color: #ffeb3b;
+      text-shadow: 4px 4px 0 #d500f9;
+    }
+
+    .roadmap-steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .step {
+      background: rgba(255,255,255,0.15);
+      border: 3px solid #ffeb3b;
+      border-radius: 24px;
+      padding: 28px;
+      width: 320px;
+      backdrop-filter: blur(8px);
+    }
+
+    .step h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: #fff176;
+    }
+
+    .step p {
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+
+    /* Email Signup Form */
+    .email-section {
+      margin: 60px 0;
+      padding: 40px;
+      background: rgba(255, 215, 0, 0.1);
+      border-radius: 24px;
+      border: 2px dashed #ffeb3b;
+    }
+
+    .email-section h3 {
+      font-family: 'Chewy', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #fff176;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 10px;
+      max-width: 500px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-form input {
+      flex: 1;
+      min-width: 200px;
+      padding: 14px 20px;
+      border: 3px solid #ffeb3b;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-family: 'Comic Neue', cursive;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+    }
+
+    .email-form input::placeholder {
+      color: #999;
+    }
+
+    .email-form input:focus {
+      outline: none;
+      box-shadow: 0 0 15px rgba(255, 235, 59, 0.6);
+    }
+
+    .email-form button {
+      padding: 14px 28px;
+      background: #ffeb3b;
+      color: #d81b60;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-family: 'Comic Neue', cursive;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .email-form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 235, 59, 0.5);
+    }
+
+    .email-form button:active {
+      transform: scale(0.98);
+    }
+
+    .socials {
+      margin-top: 60px;
+      font-size: 1.5rem;
+    }
+
+    .socials a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+
+    .socials a:hover {
+      transform: scale(1.3);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 40px;
+      margin: 20px 12px;
+      border-radius: 999px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      border: 4px solid white;
+      font-family: 'Comic Neue', cursive;
+      cursor: pointer;
+    }
+
+    .btn-yellow {
+      background: #ffeb3b;
+      color: #d81b60;
+    }
+
+    .btn-blue {
+      background: #00d4ff;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-6px) scale(1.08);
+    }
+
+    .btn:active {
+      transform: translateY(-2px) scale(1.03);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+      border-top: 2px solid rgba(255, 235, 59, 0.3);
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 35px 25px;
+      }
+
+      .roadmap-steps {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .step {
+        width: 100%;
+        max-width: 380px;
+      }
+
+      .email-form {
+        flex-direction: column;
+      }
+
+      .email-form input {
+        min-width: auto;
+      }
+
+      .char.left,
+      .char.right,
+      .char.bottom {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+      }
+
+      .socials a {
+        margin: 0 10px;
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        margin: 10px 6px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to PlayDoughCoin</h1>
-    </header>
-    <main>
-        <section class="signup-form">
-            <h2>Join Our Community</h2>
-            <form action="#" method="post">
-                <label for="email">Enter your email:</label>
-                <input type="email" id="email" name="email" required aria-required="true">
-                <input type="submit" value="Sign Up">
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 PlayDoughCoin. All rights reserved.</p>
-    </footer>
+  <div class="background"></div>
+  <div class="container">
+    <div class="card">
+      <!-- Floating characters -->
+      <div class="characters">
+        <div class="char left" style="background-image: url('https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=200');"></div>
+        <div class="char right" style="background-image: url('https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=200');"></div>
+        <div class="char bottom" style="background-image: url('https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=240');"></div>
+      </div>
+
+      <div class="title">
+        <span class="c-yellow">$</span>
+        <span class="c-orange">P</span>
+        <span class="c-pink">L</span>
+        <span class="c-purple">Y</span>
+        <span class="c-cyan">D</span>
+      </div>
+
+      <h1 class="subtitle">PlayDoughCoin <span class="highlight">Relaunch</span></h1>
+
+      <p class="intro">
+        This is the <strong>official relaunch</strong> of PlayDoughCoin — we're coming back stronger! 🍪✨<br><br>
+        The first launch was completely silent — no members, no socials, no community.<br>
+        Our mission since then has been to <strong>slowly build a real, squishy, fun community</strong> before dropping the real thing.<br><br>
+        Tokenomics, full details, and launch info will be uploaded to the website and all socials <strong>right before launch</strong>.<br>
+        This gives our growing community the <strong>fair shot</strong> they deserve — no bots, no insiders, just the dough squad ready to mould the future!
+      </p>
+
+      <div>
+        <a href="#roadmap" class="btn btn-yellow">See Roadmap</a>
+        <a href="https://t.me/PlayDoughCoin" target="_blank" class="btn btn-blue">Join the Telegram</a>
+      </div>
+
+      <!-- Email Signup Section -->
+      <div class="email-section">
+        <h3>🎉 Get Updates!</h3>
+        <p style="margin-bottom: 20px;">Be first to know about launch details, contests, and exclusive perks!</p>
+        <form class="email-form" onsubmit="handleEmailSignup(event)">
+          <input type="email" placeholder="Enter your email" required aria-label="Email address">
+          <button type="submit">Join Waitlist</button>
+        </form>
+        <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.85;">✉️ We'll never spam you — just the dough truth!</p>
+      </div>
+
+      <!-- Roadmap -->
+      <div class="section" id="roadmap">
+        <h2>Roadmap</h2>
+        <div class="roadmap-steps">
+          <div class="step">
+            <h3>Phase 1 – Dough Awakening (Done)</h3>
+            <p>Silent first launch • Quietly built strong & squishy community • Created Play-Dough characters & memes • Established Telegram & X presence • Prepared for fair relaunch</p>
+          </div>
+          <div class="step">
+            <h3>Phase 2 – Shape the Relaunch</h3>
+            <p>Official $PLYD token relaunch • Release full details & tokenomics on web/socials • Community contests & rewards • Limited-edition dough creatures & memes • Big marketing push for fair launch</p>
+          </div>
+          <div class="step">
+            <h3>Phase 3 – Rise & Mould</h3>
+            <p>Cross-chain expansion • PlayDough games & mini-apps • Major CEX listings • Real-world Play-Doh collabs & merch • Community treasury & governance • Become the most fun, fair meme coin on the block</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Socials -->
+      <div class="socials">
+        <a href="https://x.com/playdoughcoin" target="_blank" aria-label="Twitter/X">🐦 @playdoughcoin</a>
+        <a href="https://t.me/PlayDoughCoin" target="_blank" aria-label="Telegram">✈️ t.me/PlayDoughCoin</a>
+      </div>
+
+      <footer>
+        <p>&copy; 2026 PlayDoughCoin. Made with 💛 by the dough squad.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function handleEmailSignup(event) {
+      event.preventDefault();
+      const email = event.target.querySelector('input[type="email"]').value;
+      
+      // Simple validation and feedback
+      if (email) {
+        alert(`🎉 Thanks for joining! We'll email ${email} with updates soon!`);
+        event.target.reset();
+        // In production, you'd send this to a backend/email service
+      }
+    }
+  </script>
 </body>
-</html>
+                                    </html>
