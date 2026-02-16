@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Play-Dough - The official relaunch of the most fun, fair meme coin. Join our squishy community today!">
+<meta name="keywords" content="Play-Dough, meme coin, crypto, blockchain">
+<meta name="author" content="Play-Dough Team">
+
+<meta property="og:title" content="Play-Dough • Official Relaunch">
+<meta property="og:description" content="Join the Play-Dough relaunch — A fair, fun meme coin built by the community.">
+<meta property="og:image" content="assets/Logo.jpg">
+
+<title>Play-Dough • Official Relaunch</title>
+
+<link rel="icon" type="image/png" href="assets/Logo.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Comic Neue',cursive;background:#4fc3f7;color:white;min-height:100vh;overflow-x:hidden;}
+.background{position:fixed;inset:0;background:linear-gradient(rgba(79,195,247,0.8),rgba(79,195,247,0.8)),url('assets/WellcomeBanner.png') center/cover no-repeat;z-index:-2;}
+.container{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:60px 20px;}
+.card{background:rgba(255,255,255,0.15);backdrop-filter:blur(25px);border:4px solid rgba(255,215,0,0.6);border-radius:40px;padding:50px 30px;max-width:900px;width:100%;text-align:center;box-shadow:0 25px 80px rgba(0,0,0,0.4);position:relative;overflow:hidden;}
+.banner-img{width:100%;border-radius:20px;margin-bottom:30px;border:3px solid #ffeb3b;}
+.title{font-family:'Chewy',cursive;font-size:clamp(3.5rem,10vw,7rem);line-height:0.92;margin-bottom:10px;}
+.subtitle{font-size:clamp(1.8rem,5vw,2.8rem);margin:10px 0 30px;color:#fff176;}
+.intro{font-size:1.3rem;max-width:750px;margin:0 auto 40px;line-height:1.6;color:#fffde7;background:rgba(0,0,0,0.1);padding:20px;border-radius:20px;}
+.section h2{font-family:'Chewy',cursive;font-size:clamp(2.5rem,6vw,4rem);margin:40px 0 30px;color:#ffeb3b;}
+.roadmap-steps{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+.step{background:rgba(255,255,255,0.1);border:2px solid #ffeb3b;border-radius:20px;padding:20px;width:100%;max-width:260px;}
+.btn{display:inline-block;padding:15px 35px;margin:10px;border-radius:50px;font-size:1.2rem;font-weight:bold;text-decoration:none;transition:0.3s;border:3px solid white;cursor:pointer;}
+.btn-yellow{background:#ffeb3b;color:#d81b60;}
+.btn-blue{background:#00d4ff;color:white;}
+.btn:hover{transform:scale(1.1);}
+.socials{margin-top:40px;}
+.socials a{color:white;margin:0 15px;text-decoration:none;font-weight:bold;}
+footer{margin-top:40px;opacity:0.7;font-size:0.9rem;}
+@media(max-width:768px){.roadmap-steps{flex-direction:column;align-items:center;}.step{max-width:100%;}}
+</style>
+</head>
+<body>
+<div class="background"></div>
+<div class="container">
+<div class="card">
+<img src="assets/Logo.jpg" alt="Play-Dough Logo" style="width:180px;margin-bottom:20px;">
+<h1 class="title">Play-Dough</h1>
+<h2 class="subtitle">Official Relaunch</h2>
+<img src="assets/AboutPldy.png" alt="About Play-Dough" class="banner-img">
+<p class="intro">This is the <strong>official relaunch</strong> of Play-Dough — we're coming back stronger! 🍪✨<br><br>
+Our mission is to <strong>build a real, squishy, fun community</strong> before dropping the real thing.
+No bots, no insiders, just the dough squad ready to mould the future!
+</p>
+<div>
+<a href="#roadmap" class="btn btn-yellow">View Roadmap</a>
+<a href="https://t.me/PlayDoughCoin" target="_blank" class="btn btn-blue">Join Telegram</a>
+</div>
+<div class="section" id="roadmap">
+<h2>Our Roadmap</h2>
+<img src="assets/Roadmap.png" alt="Play-Dough Roadmap" class="banner-img">
+<div class="roadmap-steps">
+<div class="step"><h3 style="color:#ffeb3b;">Q1</h3><p><strong>Build Foundation</strong><br>Website Launch<br>Community Building<br>Target: 500+ Socials</p></div>
+<div class="step"><h3 style="color:#ffeb3b;">Q2</h3><p><strong>Launch Token</strong><br>Token Drop<br>Initial Giveaways<br>Liquidity Pool Setup</p></div>
+<div class="step"><h3 style="color:#ffeb3b;">Q3</h3><p><strong>Marketing</strong><br>Marketing Campaign<br>Influencer Partnerships<br>Community Events</p></div>
+<div class="step"><h3 style="color:#ffeb3b;">Q4</h3><p><strong>Merchandise Launch</strong><br>Launch Online Shop<br>Dough Merchandise<br>Limited Edition Items</p></div>
+</div>
+</div>
+<img src="assets/CommunityConect.png" alt="Join the Community" class="banner-img" style="margin-top:40px;">
+<div class="socials">
+<a href="https://x.com/playdoughcoin" target="_blank">🐦 Twitter/X</a>
+<a href="https://t.me/PlayDoughCoin" target="_blank">✈️ Telegram</a>
+</div>
+<footer><p>© 2026 Play-Dough. Made with 💛 by the Dough Squad.</p></footer>
+</div>
+</div>
+</body>
+</html>
